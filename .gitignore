@@ -1,2 +1,5 @@
-./scratch-pad
-./temp
+# Mac system files
+.DS_store
+
+/scratch-pad/
+/temp/
