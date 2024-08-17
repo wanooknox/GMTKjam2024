@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://5fimm6hu70yy" path="res://game-objects/player.tscn" id="1_8yufc"]
 [ext_resource type="Texture2D" uid="uid://damvqy2c5rtm1" path="res://art/Sprite-0003-Sheet.png" id="2_b261l"]
-[ext_resource type="PackedScene" uid="uid://gumiodhnhytr" path="res://game-objects/game-canvas.tscn" id="3_o36uh"]
+[ext_resource type="PackedScene" uid="uid://d4bo25i7ylr2x" path="res://game-objects/game-canvas.tscn" id="3_o36uh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlkyg"]
 texture = ExtResource("2_b261l")
