@@ -1,13 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2jn28h83glms"]
+[gd_scene load_steps=2 format=3 uid="uid://b2jn28h83glms"]
 
 [ext_resource type="Script" path="res://scripts/game-audio-player.gd" id="1_tlnny"]
-[ext_resource type="AudioStream" uid="uid://lrosuvdkvfjk" path="res://sfx/random.wav" id="2_5ypkl"]
 
 [node name="GameAudio" type="Node2D"]
 script = ExtResource("1_tlnny")
 
 [node name="FxAudioPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_5ypkl")
 bus = &"Fx"
 
 [node name="MusicAudioPlayer" type="AudioStreamPlayer" parent="."]
