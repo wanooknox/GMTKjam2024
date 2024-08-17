@@ -7,15 +7,12 @@
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlkyg"]
 texture = ExtResource("2_b261l")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:0/0/physics_layer_0/polygon_0/one_way_margin = 16.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 6, -8, 6)
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0/physics_layer_0/polygon_0/one_way = true
-1:0/0/physics_layer_0/polygon_0/one_way_margin = 16.0
 2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:0/0/physics_layer_0/polygon_0/one_way_margin = 16.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 6, -8, 6)
 
 [sub_resource type="TileSet" id="TileSet_f05sc"]
 physics_layer_0/collision_layer = 1
@@ -32,7 +29,6 @@ zoom = Vector2(2, 2)
 limit_left = -160
 limit_right = 160
 limit_bottom = 64
-limit_smoothed = true
 position_smoothing_enabled = true
 drag_vertical_enabled = true
 editor_draw_limits = true
