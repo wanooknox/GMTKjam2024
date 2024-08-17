@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlts1nxotnu1s"]
+[gd_scene load_steps=3 format=3 uid="uid://dlts1nxotnu1s"]
+
+[ext_resource type="Script" path="res://scripts/welcome_screen.gd" id="1_eya7r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hkcvg"]
 font_size = 37
@@ -10,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_eya7r")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 0
@@ -29,4 +32,7 @@ offset_bottom = 257.0
 
 [node name="Button" type="Button" parent="CenterContainer2"]
 layout_mode = 2
+action_mode = 0
 text = "Click Here or Press Space to start"
+
+[connection signal="pressed" from="CenterContainer2/Button" to="." method="_on_button_pressed"]
