@@ -16,3 +16,8 @@ func reset_score() -> void:
 
 func get_score() -> int:
 	return _current_score
+
+
+# TODO Remove this code, only using to increase the score to prove it works
+func _process(delta: float) -> void:
+	increase_score(1)
