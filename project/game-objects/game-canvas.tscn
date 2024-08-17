@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d4bo25i7ylr2x"]
 
-[ext_resource type="Script" path="res://scripts/ui_score_updater.gd" id="1_d3t8f"]
+[ext_resource type="Script" path="res://scripts/ui-score-updater.gd" id="1_d3t8f"]
 
 [node name="GameCanvas" type="CanvasLayer"]
 
