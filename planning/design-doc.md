@@ -25,6 +25,7 @@ You are a lowly construction worker on a job site with a failing saffolding. You
   * [ ] Jumping between platforms
   * [ ] Problem Points (interactable object with timer that needs to be fixed)
   * [x] Scoring system + Score UI
+  * [ ] Audio system: ability to play arbitrary audio
 * Extras
   * Multiple different problems that require different tools
     * [ ] Loose nails (hammer)
