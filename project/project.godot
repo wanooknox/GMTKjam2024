@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 ScoreTracker="*res://scripts/score-tracker.gd"
 AudioPlayer="*res://scripts/audio-player.gd"
+GameAudio="*res://game-objects/game-audio.tscn"
 
 [display]
 
