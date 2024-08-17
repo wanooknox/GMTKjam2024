@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckidnwiops78j"]
+[gd_scene load_steps=3 format=3 uid="uid://ckidnwiops78j"]
 
 [ext_resource type="PackedScene" uid="uid://5fimm6hu70yy" path="res://game-objects/player.tscn" id="1_8yufc"]
+[ext_resource type="PackedScene" uid="uid://d4bo25i7ylr2x" path="res://game-objects/game-canvas.tscn" id="2_0ir25"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -10,3 +11,5 @@ position = Vector2(29, 37)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(29, 29)
 zoom = Vector2(2, 2)
+
+[node name="GameCanvas" parent="." instance=ExtResource("2_0ir25")]
