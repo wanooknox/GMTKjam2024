@@ -11,8 +11,9 @@ func _physics_process(delta: float) -> void:
 
 	var on_floor:bool = is_on_floor()
 	var just_jumped:bool = Input.is_action_just_pressed("jump")
+	var just_dropped:bool = Input.is_action_just_pressed("drop")
 
-	if Input.is_action_pressed("look_down") and just_jumped and on_floor:
+	if Input.is_action_pressed("look_down") and just_dropped and on_floor:
 		drop_down()
 	elif just_jumped and on_floor:
 		apply_jump_velocity()
