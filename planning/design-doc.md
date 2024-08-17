@@ -19,19 +19,19 @@ You are a lowly construction worker on a job site with a failing saffolding. You
 
 ## Feature Goals
 * MVP
-  * Player character with movement controller
-  * Gravity
-  * Platform collisions
-  * Jumping between platforms
-  * Problem Points (interactable object with timer that needs to be fixed)
-  * Scoring system + Score UI
+  * [ ] Player character with movement controller
+  * [ ] Gravity
+  * [ ] Platform collisions
+  * [ ] Jumping between platforms
+  * [ ] Problem Points (interactable object with timer that needs to be fixed)
+  * [x] Scoring system + Score UI
 * Extras
   * Multiple different problems that require different tools
-    * Loose nails (hammer)
-    * Loose bolts (drill)
-    * Extended plank (saw)
-  * Faster tools for faster fixing
-  * Unlockable elevator to reach the ground and swap tools quickly
-  * Saftey Review Card as the score screen
-  * Different interaction methods for different tools (Hold button for drill, tap for hammer, arrow keys for saw)
-  * (Stretch) Unlevel floor panels, you need to shorten the vertical beam below
+    * [ ] Loose nails (hammer)
+    * [ ] Loose bolts (drill)
+    * [ ] Extended plank (saw)
+  * [ ] Faster tools for faster fixing
+  * [ ] Unlockable elevator to reach the ground and swap tools quickly
+  * [ ] Saftey Review Card as the score screen
+  * [ ] Different interaction methods for different tools (Hold button for drill, tap for hammer, arrow keys for saw)
+  * [ ] (Stretch) Unlevel floor panels, you need to shorten the vertical beam below
