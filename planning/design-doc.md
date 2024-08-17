@@ -19,14 +19,15 @@ You are a lowly construction worker on a job site with a failing saffolding. You
 
 ## Feature Goals
 * MVP
-  * [ ] Player character with movement controller
-  * [ ] Gravity
-  * [ ] Platform collisions
-  * [ ] Jumping between platforms
+  * [x] Player character with movement controller
+  * [x] Gravity
+  * [x] Platform collisions
+  * [x] Jumping between platforms
   * [ ] Problem Points (interactable object with timer that needs to be fixed)
   * [x] Scoring system + Score UI
   * [ ] Audio system: ability to play arbitrary audio
 * Extras
+* [ ] Pixel font of UI text
   * Multiple different problems that require different tools
     * [ ] Loose nails (hammer)
     * [ ] Loose bolts (drill)
