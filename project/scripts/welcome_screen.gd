@@ -5,10 +5,11 @@ extends Control
 func _ready() -> void:
 	pass # Replace with function body.
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventKey:
-		if event.pressed and event.keycode == KEY_SPACE:
-			_on_button_pressed()
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("ui_select"):
+		_on_button_pressed()
+
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://rooms/game.tscn")

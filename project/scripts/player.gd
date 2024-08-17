@@ -13,11 +13,9 @@ func _physics_process(delta: float) -> void:
 	var just_jumped:bool = Input.is_action_just_pressed("jump")
 
 	if Input.is_action_pressed("look_down") and just_jumped and on_floor:
-		# handle drop down
-		drop()
+		drop_down()
 	elif just_jumped and on_floor:
-		# Handle jump.
-		velocity.y = JUMP_VELOCITY
+		apply_jump_velocity()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -30,5 +28,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func drop():
+func drop_down():
 	position.y += 2
+
+
+func apply_jump_velocity():
+	velocity.y = JUMP_VELOCITY
