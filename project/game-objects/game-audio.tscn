@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2jn28h83glms"]
+[gd_scene load_steps=2 format=3 uid="uid://dortwco7ywau6"]
 
 [ext_resource type="Script" path="res://scripts/game-audio-player.gd" id="1_tlnny"]
 

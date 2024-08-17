@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://ckidnwiops78j"]
+[gd_scene load_steps=8 format=4 uid="uid://ckidnwiops78j"]
 
 [ext_resource type="PackedScene" uid="uid://5fimm6hu70yy" path="res://game-objects/player.tscn" id="1_8yufc"]
 [ext_resource type="Texture2D" uid="uid://du35cbhmg20bk" path="res://art/Sprite-0003-Sheet.png" id="2_b261l"]
 [ext_resource type="PackedScene" uid="uid://gumiodhnhytr" path="res://game-objects/game-canvas.tscn" id="3_o36uh"]
-[ext_resource type="PackedScene" uid="uid://b2jn28h83glms" path="res://game-objects/game-audio.tscn" id="4_pmqdl"]
 [ext_resource type="PackedScene" uid="uid://malclcy2qgrd" path="res://game-objects/interactable-nail.tscn" id="4_5cps1"]
+[ext_resource type="PackedScene" uid="uid://dortwco7ywau6" path="res://game-objects/game-audio.tscn" id="4_pmqdl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlkyg"]
 texture = ExtResource("2_b261l")
