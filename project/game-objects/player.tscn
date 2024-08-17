@@ -28,3 +28,5 @@ sprite_frames = SubResource("SpriteFrames_mecld")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_lqt8o")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]

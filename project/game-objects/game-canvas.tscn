@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4bo25i7ylr2x"]
+[gd_scene load_steps=2 format=3 uid="uid://gumiodhnhytr"]
 
 [ext_resource type="Script" path="res://scripts/ui-score-updater.gd" id="1_d3t8f"]
 
