@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://du35cbhmg20bk" path="res://art/Sprite-0003-Sheet.png" id="2_b261l"]
 [ext_resource type="PackedScene" uid="uid://gumiodhnhytr" path="res://game-objects/game-canvas.tscn" id="3_o36uh"]
 [ext_resource type="PackedScene" uid="uid://b2jn28h83glms" path="res://game-objects/game-audio.tscn" id="4_pmqdl"]
+[ext_resource type="PackedScene" uid="uid://malclcy2qgrd" path="res://game-objects/interactable-nail.tscn" id="4_5cps1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlkyg"]
 texture = ExtResource("2_b261l")
@@ -42,3 +43,6 @@ tile_set = SubResource("TileSet_f05sc")
 [node name="GameCanvas" parent="." instance=ExtResource("3_o36uh")]
 
 [node name="GameAudio" parent="." instance=ExtResource("4_pmqdl")]
+
+[node name="InteractableNail" parent="." instance=ExtResource("4_5cps1")]
+position = Vector2(136, -16)

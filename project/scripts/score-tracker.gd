@@ -19,5 +19,5 @@ func get_score() -> int:
 
 
 # TODO Remove this code, only using to increase the score to prove it works
-func _process(_delta: float) -> void:
-	increase_score(1)
+# func _process(_delta: float) -> void:
+	# increase_score(1)
