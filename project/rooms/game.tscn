@@ -1,15 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckidnwiops78j"]
+[gd_scene load_steps=6 format=4 uid="uid://ckidnwiops78j"]
 
 [ext_resource type="PackedScene" uid="uid://5fimm6hu70yy" path="res://game-objects/player.tscn" id="1_8yufc"]
-[ext_resource type="PackedScene" uid="uid://d4bo25i7ylr2x" path="res://game-objects/game-canvas.tscn" id="2_0ir25"]
+[ext_resource type="Texture2D" uid="uid://damvqy2c5rtm1" path="res://art/Sprite-0003-Sheet.png" id="2_b261l"]
+[ext_resource type="PackedScene" uid="uid://gumiodhnhytr" path="res://game-objects/game-canvas.tscn" id="3_o36uh"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlkyg"]
+texture = ExtResource("2_b261l")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/physics_layer_0/polygon_0/one_way_margin = 16.0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0/physics_layer_0/polygon_0/one_way = true
+1:0/0/physics_layer_0/polygon_0/one_way_margin = 16.0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0/physics_layer_0/polygon_0/one_way_margin = 16.0
+
+[sub_resource type="TileSet" id="TileSet_f05sc"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_dlkyg")
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_8yufc")]
-position = Vector2(29, 37)
+z_index = 100
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(29, 29)
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -7)
 zoom = Vector2(2, 2)
+limit_left = -160
+limit_right = 160
+limit_bottom = 64
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_vertical_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
-[node name="GameCanvas" parent="." instance=ExtResource("2_0ir25")]
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAFAP//AAAAAAAAAAAGAP//AAABAAAAAAAHAP//AAABAAAAAAAIAP//AAACAAAAAAD9////AAACAAAAAAD8////AAABAAAAAAD7////AAABAAAAAAD6////AAAAAAAAAAD4/wMAAAABAAAAAAD5/wMAAAABAAAAAAD6/wMAAAABAAAAAAD7/wMAAAABAAAAAAD8/wMAAAABAAAAAAD9/wMAAAABAAAAAAD+/wMAAAABAAAAAAD//wMAAAABAAAAAAAAAAMAAAABAAAAAAABAAMAAAABAAAAAAACAAMAAAABAAAAAAAHAAMAAAABAAAAAAAGAAMAAAABAAAAAAAFAAMAAAABAAAAAAAEAAMAAAABAAAAAAADAAMAAAABAAAAAAD+/wEAAAABAAAAAAD//wEAAAABAAAAAAAAAAEAAAABAAAAAAABAAEAAAABAAAAAAAIAAMAAAABAAAAAAAJAAMAAAABAAAAAAD2/wMAAAABAAAAAAD3/wMAAAABAAAAAAADAP7/AAABAAAAAAAEAP7/AAABAAAAAAAKAAMAAAAAAAAAAAAKAP3/AAAAAAAAAAAKAPz/AAAAAAAAAAAKAPv/AAAAAAAAAAD1/wMAAAACAAAAAAD1/wIAAAACAAAAAAD1/wEAAAACAAAAAAD1/wAAAAACAAAAAAD1////AAACAAAAAAD1//7/AAACAAAAAAD1//3/AAACAAAAAAD1//z/AAACAAAAAAD1//v/AAACAAAAAAD1//r/AAACAAAAAAD1//n/AAACAAAAAAD1//j/AAACAAAAAAD1//f/AAACAAAAAAD1//b/AAACAAAAAAD1//X/AAACAAAAAAD1//T/AAACAAAAAAD1//P/AAACAAAAAAD1//L/AAACAAAAAAAKAPr/AAAAAAAAAAAKAPn/AAAAAAAAAAAKAPj/AAAAAAAAAAAKAPf/AAAAAAAAAAAKAPb/AAAAAAAAAAAKAPX/AAAAAAAAAAAKAPT/AAAAAAAAAAAKAPP/AAAAAAAAAAAKAPL/AAAAAAAAAAAKAPH/AAAAAAAAAAAKAP7/AAAAAAAAAAAKAP//AAAAAAAAAAAKAAAAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAPD/AAAAAAAAAAAKAO//AAAAAAAAAAAKAO7/AAAAAAAAAAAKAO3/AAAAAAAAAAD1//H/AAACAAAAAAD1//D/AAACAAAAAAD1/+//AAACAAAAAAD1/+7/AAACAAAAAAD1/+3/AAACAAAAAAD1/+z/AAACAAAAAAD1/+v/AAACAAAAAAD1/+r/AAACAAAAAAD1/+n/AAACAAAAAAD1/+j/AAACAAAAAAAKAOz/AAAAAAAAAAAKAOv/AAAAAAAAAAAKAOr/AAAAAAAAAAAKAOn/AAAAAAAAAAAKAOj/AAAAAAAAAAAKAOf/AAAAAAAAAAD///z/AAABAAAAAAAAAPz/AAABAAAAAAABAPz/AAABAAAAAAD7//r/AAABAAAAAAD8//r/AAABAAAAAAD9//r/AAABAAAAAAAAAPf/AAABAAAAAAABAPf/AAABAAAAAAACAPf/AAABAAAAAAD///f/AAABAAAAAAAEAPX/AAABAAAAAAAFAPX/AAABAAAAAAAGAPX/AAABAAAAAAD1/+f/AAACAAAAAAA=")
+tile_set = SubResource("TileSet_f05sc")
+
+[node name="GameCanvas" parent="." instance=ExtResource("3_o36uh")]
