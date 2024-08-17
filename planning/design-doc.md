@@ -1,11 +1,37 @@
 # Design Doc 
 
+## Theme
+Built to Scale
+
 ## Core Idea
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget aliquet felis, id ultricies orci. Curabitur at metus sit amet nibh volutpat ultrices. In est nibh, mattis non iaculis eu, faucibus vitae quam. Etiam luctus tortor nisi, vitae consectetur elit scelerisque id. Nulla ornare dignissim sapien, vitae egestas massa facilisis sit amet. Integer eget sem lorem. Morbi maximus aliquam turpis vitae semper. Maecenas tincidunt vel nisi nec facilisis. Sed ut vulputate est, vitae vulputate erat. Donec elementum, est nec tristique consectetur, erat odio tempor lectus, eu tempus augue velit sit amet velit. Aenean dignissim nunc suscipit, sollicitudin sem semper, lacinia turpis. Ut ac commodo velit. Praesent a ornare mi, nec finibus dolor. Duis erat orci, gravida nec enim eget, scelerisque fermentum tellus. Nunc tempus purus aliquam metus eleifend placerat. Phasellus egestas metus sit amet tortor commodo, sit amet aliquet ligula sagittis. 
+You are a lowly construction worker on a job site with a failing saffolding. You need to repair the saffolding BEFORE the saftey inspector shows up.
+
+
+## Feature Ideas
+* multi layer saffolding with bolts that need tightened
+* each layer of the saffolding gets "harder" to fix
+* Tool upgrades as you progress to make fixing problems faster
+* Tool gets replaced by the new "upgrade" tool once picked up
+* (stretch) Tool belt to carry multiple tools that are applicable to different problems
+* Can only carry one tool at a time, the rest of the tools are stored at ground level
+* unlockable elevator that can be used to reach the ground faster
+* End screen is a saftey score card
 
 ## Feature Goals
-* Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-* Etiam eget aliquet felis, id ultricies orci. 
-* Curabitur at metus sit amet nibh volutpat ultrices. 
-* In est nibh, mattis non iaculis eu, faucibus vitae quam. 
-* Etiam luctus tortor nisi, vitae consectetur elit scelerisque id. 
+* MVP
+  * Player character with movement controller
+  * Gravity
+  * Platform collisions
+  * Jumping between platforms
+  * Problem Points (interactable object with timer that needs to be fixed)
+  * Scoring system + Score UI
+* Extras
+  * Multiple different problems that require different tools
+    * Loose nails (hammer)
+    * Loose bolts (drill)
+    * Extended plank (saw)
+  * Faster tools for faster fixing
+  * Unlockable elevator to reach the ground and swap tools quickly
+  * Saftey Review Card as the score screen
+  * Different interaction methods for different tools (Hold button for drill, tap for hammer, arrow keys for saw)
+  * (Stretch) Unlevel floor panels, you need to shorten the vertical beam below
