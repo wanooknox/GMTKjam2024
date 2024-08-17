@@ -4,7 +4,7 @@ extends Node
 
 
 func _ready() -> void:
-	ScoreTracker.connect("score_changed", _on_score_changed) # Link up to the score_changed event on ScoreTracker
+	ScoreTracker.score_changed.connect(_on_score_changed) # Link up to the score_changed event on ScoreTracker
 	_on_score_changed()
 
 
