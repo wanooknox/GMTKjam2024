@@ -25,3 +25,6 @@ data_*/
 mono_crash.*.json
 project/.vscode/settings.json
 .vscode/settings.json
+
+# JetBrains
+.idea
