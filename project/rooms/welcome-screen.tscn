@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlts1nxotnu1s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hkcvg"]
+font_size = 37
+
+[node name="Welcome-screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 67.0
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+text = "Project"
+label_settings = SubResource("LabelSettings_hkcvg")
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_top = 160.0
+offset_right = 480.0
+offset_bottom = 257.0
+
+[node name="Button" type="Button" parent="CenterContainer2"]
+layout_mode = 2
+text = "Click Here or Press Space to start"
