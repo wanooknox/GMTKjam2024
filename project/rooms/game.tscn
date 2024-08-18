@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://ckidnwiops78j"]
+[gd_scene load_steps=11 format=4 uid="uid://ckidnwiops78j"]
 
 [ext_resource type="PackedScene" uid="uid://5fimm6hu70yy" path="res://game-objects/player.tscn" id="1_8yufc"]
 [ext_resource type="Texture2D" uid="uid://du35cbhmg20bk" path="res://art/Sprite-0003-Sheet.png" id="2_b261l"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dpbaesh6o0115" path="res://game-objects/tool-hammer.tscn" id="5_8k53q"]
 [ext_resource type="PackedScene" uid="uid://cv5tpobbdgyia" path="res://game-objects/tool-drill.tscn" id="6_x0e57"]
 [ext_resource type="PackedScene" uid="uid://dt28n0cas4ki1" path="res://game-objects/stop-wall.tscn" id="7_wjt6u"]
+[ext_resource type="PackedScene" uid="uid://dkofhikd58gpb" path="res://game-objects/interactable-bolt.tscn" id="8_fdb48"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlkyg"]
 texture = ExtResource("2_b261l")
@@ -69,3 +70,6 @@ rotation = -1.5708
 [node name="StopWallTop" parent="WorldBoundaries" instance=ExtResource("7_wjt6u")]
 position = Vector2(0, -896)
 rotation = -3.14159
+
+[node name="InteractableBolt" parent="." instance=ExtResource("8_fdb48")]
+position = Vector2(-72, -104)

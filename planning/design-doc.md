@@ -38,6 +38,7 @@ You are a lowly construction worker on a job site with a failing saffolding. You
     * [ ] Extended plank (saw)
   * Sounds
     * [x] Jump sfx
+    * [ ] Pickup tool sfx
     * [x] hammer sfx
     * [ ] drill
     * [ ] saw
