@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://5fimm6hu70yy"]
+[gd_scene load_steps=6 format=3 uid="uid://5fimm6hu70yy"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_20ov7"]
 [ext_resource type="Texture2D" uid="uid://brdfbr8n4uysr" path="res://art/Sprite-0002.png" id="1_sftyg"]
+[ext_resource type="Texture2D" uid="uid://cjo1bgcg27tw1" path="res://art/tool-placeholder.png" id="3_ji6eb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mecld"]
 animations = [{
@@ -31,3 +32,10 @@ position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_lqt8o")
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="Tools" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Tools"]
+position = Vector2(6, -9)
+scale = Vector2(0.46875, 0.46875)
+texture = ExtResource("3_ji6eb")
