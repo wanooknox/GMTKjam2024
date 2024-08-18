@@ -6,6 +6,7 @@ var _fx_sounds: Dictionary = {
 	"random": load("res://sfx/random.wav"),
 	"jump": load("res://sfx/jump.wav"),
 	"hammer": load("res://sfx/hammer.wav"),
+	"drill": load("res://sfx/drill.wav"),
 }
 
 

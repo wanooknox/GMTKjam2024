@@ -36,7 +36,7 @@ func advance_sequence(additional_progress: float) -> void:
 			ScoreTracker.increase_score(single_hit_point_val)
 
 		sprite.frame += 1
-		AudioPlayer.play("fx", "hammer")
+		AudioPlayer.play("fx", "drill")
 
 
 func _on_area_2d_body_entered(body:Node2D) -> void:
