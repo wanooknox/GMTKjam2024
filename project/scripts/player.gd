@@ -5,6 +5,8 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY:float = -300.0
 @onready var _hammer: Sprite2D = $Tools/HammerSprite
 
+var _hammer_scene: PackedScene = preload("res://game-objects/tool-hammer.tscn")
+var _current_tool: String = "none"
 
 signal pickup_tool(type: String, tool: Node2D)
 
@@ -52,7 +54,21 @@ func _on_pickup_tool(type: String, tool: Node2D) -> void:
 	match type.to_lower():
 		"hammer":
 			_hammer.visible = true
-			tool.queue_free()
 		_:
 			print("Error: Unknown tool type " + type)
+			return # TODO Maybe throw an exception instead of this BS
+
+	var new_tool: Node2D = null
+	match _current_tool:
+		"hammer":
+			new_tool = _hammer_scene.instantiate()
+
+	if new_tool != null:
+		get_tree().current_scene.add_child(new_tool)
+		new_tool.position = position
+		var random_offset = randf_range(-40.0, 40.0)
+		new_tool.linear_velocity = Vector2(random_offset, -250)
+
+	_current_tool = type
+	tool.queue_free()
 	

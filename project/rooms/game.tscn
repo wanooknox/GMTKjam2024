@@ -48,3 +48,7 @@ position = Vector2(136, -16)
 [node name="ToolHammer" parent="." instance=ExtResource("5_8k53q")]
 position = Vector2(-48, -48)
 type = "hammer"
+
+[node name="ToolHammer2" parent="." instance=ExtResource("5_8k53q")]
+position = Vector2(15, -84)
+type = "hammer"
