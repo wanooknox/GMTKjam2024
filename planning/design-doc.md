@@ -41,7 +41,7 @@ You are a lowly construction worker on a job site with a failing saffolding. You
     * [x] hammer sfx
     * [ ] drill
     * [ ] saw
-  * [ ] flip character sprite when changing directions
+  * [x] flip character sprite when changing directions
   * [ ] character sprites for running/jumping (bobbing animation for running)
   * [ ] sprite sheet for environment tile map
     * [ ] wood planks
@@ -51,7 +51,7 @@ You are a lowly construction worker on a job site with a failing saffolding. You
     * [ ] blue sky for outside edge of building
     * [ ] metal struts?
   * [ ] Pixel font for UI text
-  * [ ] Faster tools for faster fixing?
+  * [ ] ~~Faster tools for faster fixing?~~
   * [ ] Saftey Review Card as the score screen
   * [ ] Different interaction methods for different tools (Hold button for drill, tap for hammer, arrow keys for saw)
   * [ ] Unlockable elevator to reach the ground and swap tools quickly
