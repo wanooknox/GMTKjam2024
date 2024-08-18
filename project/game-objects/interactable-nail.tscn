@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4nb0v3o3abv1"]
+[gd_scene load_steps=9 format=3 uid="uid://malclcy2qgrd"]
 
 [ext_resource type="Script" path="res://scripts/interactable-nail.gd" id="1_4mmhd"]
 [ext_resource type="Texture2D" uid="uid://e7dlmbbax4or" path="res://art/nail-sheet.png" id="1_j4oo4"]

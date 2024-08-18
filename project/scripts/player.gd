@@ -3,10 +3,11 @@ extends CharacterBody2D
 
 @export var SPEED:float = 150.0
 @export var JUMP_VELOCITY:float = -300.0
-@onready var _hammer: Sprite2D = $AnimatedSprite2D/Tools/HammerSprite
+@export var hammer_scene: PackedScene
+
+@onready var _hammer_sprite: Sprite2D = $AnimatedSprite2D/Tools/HammerSprite
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var _hammer_scene: PackedScene = preload("res://game-objects/tool-hammer.tscn")
 var _current_tool: String = "none"
 
 signal pickup_tool(type: String, tool: Node2D)
@@ -14,7 +15,7 @@ signal pickup_tool(type: String, tool: Node2D)
 
 func _ready() -> void:
 	pickup_tool.connect(_on_pickup_tool)
-	_hammer.visible = false
+	_hammer_sprite.visible = false
 
 
 func _physics_process(delta: float) -> void:
@@ -27,12 +28,10 @@ func _physics_process(delta: float) -> void:
 	var just_dropped:bool = Input.is_action_just_pressed("drop")
 
 	if Input.is_action_pressed("look_down") and just_dropped and on_floor:
-		drop_down()
+		_drop_down()
 	elif just_jumped and on_floor:
 		_do_jump()
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -46,7 +45,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func drop_down():
+func _drop_down():
 	position.y += 2
 
 
@@ -58,7 +57,7 @@ func _do_jump():
 func _on_pickup_tool(type: String, tool: Node2D) -> void:
 	match type.to_lower():
 		"hammer":
-			_hammer.visible = true
+			_hammer_sprite.visible = true
 		_:
 			print("Error: Unknown tool type " + type)
 			return # TODO Maybe throw an exception instead of this BS
@@ -66,7 +65,7 @@ func _on_pickup_tool(type: String, tool: Node2D) -> void:
 	var new_tool: Node2D = null
 	match _current_tool:
 		"hammer":
-			new_tool = _hammer_scene.instantiate()
+			new_tool = hammer_scene.instantiate()
 
 	if new_tool != null:
 		get_tree().current_scene.add_child(new_tool)

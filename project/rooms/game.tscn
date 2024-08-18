@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://5fimm6hu70yy" path="res://game-objects/player.tscn" id="1_8yufc"]
 [ext_resource type="Texture2D" uid="uid://du35cbhmg20bk" path="res://art/Sprite-0003-Sheet.png" id="2_b261l"]
 [ext_resource type="PackedScene" uid="uid://gumiodhnhytr" path="res://game-objects/game-canvas.tscn" id="3_o36uh"]
-[ext_resource type="PackedScene" uid="uid://c4nb0v3o3abv1" path="res://game-objects/interactable-nail.tscn" id="4_5cps1"]
-[ext_resource type="PackedScene" uid="uid://dm6uuso77xy2u" path="res://game-objects/tool-hammer.tscn" id="5_8k53q"]
+[ext_resource type="PackedScene" uid="uid://malclcy2qgrd" path="res://game-objects/interactable-nail.tscn" id="4_5cps1"]
+[ext_resource type="PackedScene" uid="uid://dpbaesh6o0115" path="res://game-objects/tool-hammer.tscn" id="5_8k53q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlkyg"]
 texture = ExtResource("2_b261l")
