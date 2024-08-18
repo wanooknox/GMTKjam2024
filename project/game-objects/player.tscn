@@ -33,9 +33,9 @@ shape = SubResource("CapsuleShape2D_lqt8o")
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
 
-[node name="Tools" type="Node" parent="."]
+[node name="Tools" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Tools"]
+[node name="HammerSprite" type="Sprite2D" parent="Tools"]
 position = Vector2(6, -9)
 scale = Vector2(0.46875, 0.46875)
 texture = ExtResource("3_ji6eb")
