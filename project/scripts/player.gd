@@ -55,6 +55,10 @@ func _do_jump():
 	velocity.y = JUMP_VELOCITY
 	AudioPlayer.play("fx", "jump")
 
+
+func get_current_tool_type() -> String:
+	return _current_tool_type
+
 	
 func _on_pickup_tool(type: String, tool: Node2D) -> void:
 	_show_picked_up_tool(type)

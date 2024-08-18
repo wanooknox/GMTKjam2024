@@ -7,7 +7,7 @@ extends Node2D
 @onready var sprite:AnimatedSprite2D = $AnimatedSprite2D
 @onready var last_frame: int = sprite.sprite_frames.get_frame_count("default") - 1
 
-var is_intersecting: bool = false
+var _intersecting_player: Node2D
 
 
 func _ready() -> void:
@@ -15,8 +15,8 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if is_intersecting:
-		if Input.is_action_just_released("interact"):
+	if _intersecting_player != null:
+		if Input.is_action_just_released("interact") and _intersecting_player.get_current_tool_type() == "hammer":
 			advance_sequence()
 
 func advance_sequence() -> void:
@@ -30,10 +30,11 @@ func advance_sequence() -> void:
 		AudioPlayer.play("fx", "hammer")
 
 
-func _on_area_2d_body_entered(_body:Node2D) -> void:
-	is_intersecting = true
+func _on_area_2d_body_entered(body:Node2D) -> void:
+	if body.has_method("get_current_tool_type"):
+		_intersecting_player = body
 
 
 func _on_area_2d_body_exited(_body:Node2D) -> void:
-	is_intersecting = false
+	_intersecting_player = null
 
