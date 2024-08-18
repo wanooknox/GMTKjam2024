@@ -95,4 +95,3 @@ func _throw_current_tool():
 		var random_offset = randf_range(-400.0, 400.0)
 		new_tool_instance.rotation = randf_range(-15, 15)
 		new_tool_instance.linear_velocity = Vector2(random_offset, -600)
-
