@@ -8,7 +8,7 @@ var _player: Node2D = null
 
 func _process(delta: float) -> void:
 	if _player != null and Input.is_action_just_pressed("interact"):
-		_player.pickup_tool.emit(type)
+		_player.pickup_tool.emit(type, self)
 
 
 func _pickup_area_entered(body: Node2D) -> void:

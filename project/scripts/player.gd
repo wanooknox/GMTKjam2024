@@ -3,13 +3,15 @@ extends CharacterBody2D
 
 @export var SPEED:float = 150.0
 @export var JUMP_VELOCITY:float = -300.0
+@onready var _hammer: Sprite2D = $Tools/HammerSprite
 
 
-signal pickup_tool(type: String)
+signal pickup_tool(type: String, tool: Node2D)
 
 
 func _ready() -> void:
 	pickup_tool.connect(_on_pickup_tool)
+	_hammer.visible = false
 
 
 func _physics_process(delta: float) -> void:
@@ -46,6 +48,11 @@ func _do_jump():
 	AudioPlayer.play("fx", "jump")
 
 	
-func _on_pickup_tool(type: String) -> void:
-	print("picked up a " + type)
+func _on_pickup_tool(type: String, tool: Node2D) -> void:
+	match type.to_lower():
+		"hammer":
+			_hammer.visible = true
+			tool.queue_free()
+		_:
+			print("Error: Unknown tool type " + type)
 	
