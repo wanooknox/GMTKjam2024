@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var total_point_value: int = 70
 @export var single_hit_point_val: int = 10
 @export var last_hit_point_val: int = 50
 
@@ -7,6 +8,10 @@ extends Node2D
 @onready var last_frame: int = sprite.sprite_frames.get_frame_count("default") - 1
 
 var is_intersecting: bool = false
+
+
+func _ready() -> void:
+	ScoreTracker.increase_score(-1 * total_point_value)
 
 
 func _process(_delta: float) -> void:
