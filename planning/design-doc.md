@@ -47,8 +47,8 @@ You are a lowly construction worker on a job site with a failing saffolding. You
     * [ ] blue sky for outside edge of building
     * [ ] metal struts?
   * [ ] Pixel font for UI text
-  * [ ] Faster tools for faster fixing
-  * [ ] Unlockable elevator to reach the ground and swap tools quickly
+  * [ ] Faster tools for faster fixing?
   * [ ] Saftey Review Card as the score screen
   * [ ] Different interaction methods for different tools (Hold button for drill, tap for hammer, arrow keys for saw)
+  * [ ] Unlockable elevator to reach the ground and swap tools quickly
   * [ ] (Stretch) Unlevel floor panels, you need to shorten the vertical beam below
