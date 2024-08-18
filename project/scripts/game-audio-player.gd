@@ -17,13 +17,3 @@ func _on_play_sound(category: String, sound: AudioStream) -> void:
 			music_player.stop()
 			music_player.stream = sound
 			music_player.play()
-
-
-func _unhandled_input(event: InputEvent) -> void: # TODO Remove this temp code once audio is being triggered elsewhere
-	if event is InputEventKey:
-		if event.pressed and event.keycode == KEY_H:
-			AudioPlayer.play("fx", "something")
-		if event.pressed and event.keycode == KEY_J:
-			AudioPlayer.play("music", "random")
-		if event.pressed and event.keycode == KEY_K:
-			AudioPlayer.play("fx", "random")
