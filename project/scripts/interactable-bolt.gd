@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var total_point_value: int = 70
+@export var total_point_value: int = 150
 @export var single_hit_point_val: int = 10
 @export var last_hit_point_val: int = 50
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dkofhikd58gpb"]
+[gd_scene load_steps=18 format=3 uid="uid://tqo5msqdb8vj"]
 
 [ext_resource type="Script" path="res://scripts/interactable-bolt.gd" id="1_wr54k"]
 [ext_resource type="Texture2D" uid="uid://cb3th3h7i34c5" path="res://art/bolt-sheet.png" id="2_sjyw8"]
@@ -102,9 +102,6 @@ animations = [{
 
 [node name="InteractableBolt" type="Node2D"]
 script = ExtResource("1_wr54k")
-total_point_value = null
-single_hit_point_val = null
-last_hit_point_val = null
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 2
