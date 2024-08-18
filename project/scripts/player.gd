@@ -8,7 +8,7 @@ extends CharacterBody2D
 @onready var _hammer_sprite: Sprite2D = $AnimatedSprite2D/Tools/HammerSprite
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var _current_tool: String = "none"
+var _current_tool_type: String = "none"
 
 signal pickup_tool(type: String, tool: Node2D)
 
@@ -55,25 +55,32 @@ func _do_jump():
 
 	
 func _on_pickup_tool(type: String, tool: Node2D) -> void:
+	_show_picked_up_tool(type)
+	_throw_current_tool()
+
+	_current_tool_type = type
+	tool.queue_free()
+
+
+func _show_picked_up_tool(type: String):
 	match type.to_lower():
 		"hammer":
 			_hammer_sprite.visible = true
 		_:
 			print("Error: Unknown tool type " + type)
 			return # TODO Maybe throw an exception instead of this BS
-
-	var new_tool: Node2D = null
-	match _current_tool:
-		"hammer":
-			new_tool = hammer_scene.instantiate()
-
-	if new_tool != null:
-		get_tree().current_scene.add_child(new_tool)
-		new_tool.position = position + Vector2(0, -12)
-		var random_offset = randf_range(-40.0, 40.0)
-		new_tool.rotation = randf_range(-15, 15)
-		new_tool.linear_velocity = Vector2(random_offset, -300)
-
-	_current_tool = type
-	tool.queue_free()
 	
+
+func _throw_current_tool():
+	var new_tool_instance: Node2D = null
+	match _current_tool_type:
+		"hammer":
+			new_tool_instance = hammer_scene.instantiate()
+
+	if new_tool_instance != null:
+		get_tree().current_scene.add_child(new_tool_instance)
+		new_tool_instance.position = position + Vector2(0, -12)
+		var random_offset = randf_range(-80.0, 80.0)
+		new_tool_instance.rotation = randf_range(-15, 15)
+		new_tool_instance.linear_velocity = Vector2(random_offset, -300)
+
