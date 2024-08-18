@@ -14,7 +14,6 @@ func _process(delta: float) -> void:
 func _pickup_area_entered(body: Node2D) -> void:
 	if body.has_signal("pickup_tool"):
 		_player = body
-		print("Player in range of " + type)
 		return
 	print("Something collided with this tool but it could not receive a pickup signal")
 
