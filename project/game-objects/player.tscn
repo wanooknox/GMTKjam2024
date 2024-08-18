@@ -27,15 +27,16 @@ script = ExtResource("1_20ov7")
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_mecld")
 
+[node name="Tools" type="Node2D" parent="AnimatedSprite2D"]
+position = Vector2(0, 8)
+
+[node name="HammerSprite" type="Sprite2D" parent="AnimatedSprite2D/Tools"]
+position = Vector2(6, -9)
+scale = Vector2(0.46875, 0.46875)
+texture = ExtResource("3_ji6eb")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_lqt8o")
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
-
-[node name="Tools" type="Node2D" parent="."]
-
-[node name="HammerSprite" type="Sprite2D" parent="Tools"]
-position = Vector2(6, -9)
-scale = Vector2(0.46875, 0.46875)
-texture = ExtResource("3_ji6eb")
