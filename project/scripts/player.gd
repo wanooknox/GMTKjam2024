@@ -67,7 +67,8 @@ func _on_pickup_tool(type: String, tool: Node2D) -> void:
 		get_tree().current_scene.add_child(new_tool)
 		new_tool.position = position
 		var random_offset = randf_range(-40.0, 40.0)
-		new_tool.linear_velocity = Vector2(random_offset, -250)
+		new_tool.rotation = randf_range(-15, 15)
+		new_tool.linear_velocity = Vector2(random_offset, -300)
 
 	_current_tool = type
 	tool.queue_free()
