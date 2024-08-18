@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var SPEED:float = 150.0
 @export var JUMP_VELOCITY:float = -300.0
 @onready var _hammer: Sprite2D = $Tools/HammerSprite
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var _hammer_scene: PackedScene = preload("res://game-objects/tool-hammer.tscn")
 var _current_tool: String = "none"
@@ -35,6 +36,10 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED
+		if direction < 0:
+			animated_sprite.flip_h = true
+		else:
+			animated_sprite.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
