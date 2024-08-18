@@ -16,7 +16,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if _intersecting_player != null:
-		if Input.is_action_just_released("interact") and _intersecting_player.get_current_tool_type() == "hammer":
+		if Input.is_action_just_released("interact") and _intersecting_player.get_current_tool_type() == "drill":
 			advance_sequence()
 
 func advance_sequence() -> void:
