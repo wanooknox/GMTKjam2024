@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpbaesh6o0115"]
+
+[ext_resource type="Texture2D" uid="uid://cjo1bgcg27tw1" path="res://art/tool-placeholder.png" id="1_6uqwl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uy10p"]
+radius = 8.0
+
+[node name="ToolHammer" type="RigidBody2D"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_uy10p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6uqwl")
