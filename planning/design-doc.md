@@ -27,6 +27,13 @@ You are a lowly construction worker on a job site with a failing saffolding. You
   * [x] Scoring system + Score UI
   * [x] Audio system: ability to play arbitrary audio
 * Extras
+  * Game timer mechanism 
+    * [ ] Add a game countdown manager to track time left
+    * [ ] Display seconds remaining in top left of screen
+    * [ ] When timer ends, game is over, display Safety Review Card or game over UI
+    * [ ] Support easy, medium, and hard time limits
+    * [ ] UI on welcome screen to select difficulty
+  * [ ] Figure out how to replace the font and find a Pixel font for UI text
   * Add tool switching mechanism (stand over tool and interact to pickup, drops current tool)
     * [x] model tools as physics objects (so they collide with environment tiles)
     * [x] stand over tool and interact to pickup, drops current tool
@@ -34,13 +41,13 @@ You are a lowly construction worker on a job site with a failing saffolding. You
     * [x] when tool is dropped, add instant upward velocity to "throw" it and let physics land it on the ground (adds a bit of chaos to switching tools 🙂)
   * Multiple different problems that require different tools
     * [x] Loose nails (hammer)
-    * [ ] Loose bolts (drill)
+    * [x] Loose bolts (drill)
     * [ ] Extended plank (saw)
   * Sounds
     * [x] Jump sfx
     * [ ] Pickup tool sfx
     * [x] hammer sfx
-    * [ ] drill
+    * [x] drill
     * [ ] saw
     * [ ] invalid tool interaction
     * [ ] land on ground
@@ -53,7 +60,6 @@ You are a lowly construction worker on a job site with a failing saffolding. You
     * [ ] window shapes for variety
     * [ ] blue sky for outside edge of building
     * [ ] metal struts?
-  * [ ] Pixel font for UI text
   * [ ] ~~Faster tools for faster fixing?~~
   * [ ] Saftey Review Card as the score screen
   * [ ] Different interaction methods for different tools (Hold button for drill, tap for hammer, arrow keys for saw)
