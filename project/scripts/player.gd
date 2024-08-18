@@ -4,6 +4,14 @@ extends CharacterBody2D
 @export var SPEED:float = 150.0
 @export var JUMP_VELOCITY:float = -300.0
 
+
+signal pickup_tool(type: String)
+
+
+func _ready() -> void:
+	pickup_tool.connect(_on_pickup_tool)
+
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -36,3 +44,8 @@ func drop_down():
 func _do_jump():
 	velocity.y = JUMP_VELOCITY
 	AudioPlayer.play("fx", "jump")
+
+	
+func _on_pickup_tool(type: String) -> void:
+	print("picked up a " + type)
+	
