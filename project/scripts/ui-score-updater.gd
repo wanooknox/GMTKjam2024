@@ -9,4 +9,4 @@ func _ready() -> void:
 
 
 func _on_score_changed() -> void:
-	score_label.text = str(ScoreTracker.get_score())
+	score_label.text = "Safety Rating: %s" % str(ScoreTracker.get_score())
