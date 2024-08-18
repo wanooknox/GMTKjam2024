@@ -28,10 +28,10 @@ You are a lowly construction worker on a job site with a failing saffolding. You
   * [x] Audio system: ability to play arbitrary audio
 * Extras
   * Add tool switching mechanism (stand over tool and interact to pickup, drops current tool)
-    * [ ] model tools as physics objects (so they collide with environment tiles)
-    * [ ] stand over tool and interact to pickup, drops current tool
-    * [ ] display tool held by worker (bind tool object to player or just swap player sprite?)
-    * [ ] when tool is dropped, add instant upward velocity to "throw" it and let physics land it on the ground (adds a bit of chaos to switching tools 🙂)
+    * [x] model tools as physics objects (so they collide with environment tiles)
+    * [x] stand over tool and interact to pickup, drops current tool
+    * [x] display tool held by worker (bind tool object to player or just swap player sprite?)
+    * [x] when tool is dropped, add instant upward velocity to "throw" it and let physics land it on the ground (adds a bit of chaos to switching tools 🙂)
   * Multiple different problems that require different tools
     * [x] Loose nails (hammer)
     * [ ] Loose bolts (drill)
