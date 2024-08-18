@@ -92,7 +92,7 @@ func _throw_current_tool():
 	if new_tool_instance != null:
 		get_tree().current_scene.add_child(new_tool_instance)
 		new_tool_instance.position = position + Vector2(0, -12)
-		var random_offset = randf_range(-80.0, 80.0)
+		var random_offset = randf_range(-400.0, 400.0)
 		new_tool_instance.rotation = randf_range(-15, 15)
-		new_tool_instance.linear_velocity = Vector2(random_offset, -300)
+		new_tool_instance.linear_velocity = Vector2(random_offset, -600)
 
