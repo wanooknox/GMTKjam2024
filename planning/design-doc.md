@@ -41,6 +41,8 @@ You are a lowly construction worker on a job site with a failing saffolding. You
     * [x] hammer sfx
     * [ ] drill
     * [ ] saw
+    * [ ] invalid tool interaction
+    * [ ] land on ground
   * [x] flip character sprite when changing directions
   * [ ] character sprites for running/jumping (bobbing animation for running)
   * [ ] sprite sheet for environment tile map
