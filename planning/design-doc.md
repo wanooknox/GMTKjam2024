@@ -36,7 +36,11 @@ You are a lowly construction worker on a job site with a failing saffolding. You
     * [x] Loose nails (hammer)
     * [ ] Loose bolts (drill)
     * [ ] Extended plank (saw)
-  * [ ] Find and bind sfx to various actions (jump, land, hammer, drill, saw)
+  * Sounds
+    * [x] Jump sfx
+    * [x] hammer sfx
+    * [ ] drill
+    * [ ] saw
   * [ ] flip character sprite when changing directions
   * [ ] character sprites for running/jumping (bobbing animation for running)
   * [ ] sprite sheet for environment tile map
