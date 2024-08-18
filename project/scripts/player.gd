@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("look_down") and just_dropped and on_floor:
 		drop_down()
 	elif just_jumped and on_floor:
-		apply_jump_velocity()
+		_do_jump()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -33,5 +33,6 @@ func drop_down():
 	position.y += 2
 
 
-func apply_jump_velocity():
+func _do_jump():
 	velocity.y = JUMP_VELOCITY
+	AudioPlayer.play("fx", "jump")
