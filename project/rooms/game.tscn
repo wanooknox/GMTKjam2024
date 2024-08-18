@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://ckidnwiops78j"]
+[gd_scene load_steps=9 format=4 uid="uid://ckidnwiops78j"]
 
 [ext_resource type="PackedScene" uid="uid://5fimm6hu70yy" path="res://game-objects/player.tscn" id="1_8yufc"]
 [ext_resource type="Texture2D" uid="uid://du35cbhmg20bk" path="res://art/Sprite-0003-Sheet.png" id="2_b261l"]
 [ext_resource type="PackedScene" uid="uid://gumiodhnhytr" path="res://game-objects/game-canvas.tscn" id="3_o36uh"]
 [ext_resource type="PackedScene" uid="uid://malclcy2qgrd" path="res://game-objects/interactable-nail.tscn" id="4_5cps1"]
 [ext_resource type="PackedScene" uid="uid://dpbaesh6o0115" path="res://game-objects/tool-hammer.tscn" id="5_8k53q"]
+[ext_resource type="PackedScene" uid="uid://cv5tpobbdgyia" path="res://game-objects/tool-drill.tscn" id="6_x0e57"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlkyg"]
 texture = ExtResource("2_b261l")
@@ -50,3 +51,6 @@ position = Vector2(-48, -48)
 
 [node name="ToolHammer2" parent="." instance=ExtResource("5_8k53q")]
 position = Vector2(15, -84)
+
+[node name="ToolDrill" parent="." instance=ExtResource("6_x0e57")]
+position = Vector2(64, -56)

@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://5fimm6hu70yy"]
+[gd_scene load_steps=9 format=3 uid="uid://5fimm6hu70yy"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_20ov7"]
 [ext_resource type="Texture2D" uid="uid://brdfbr8n4uysr" path="res://art/Sprite-0002.png" id="1_sftyg"]
 [ext_resource type="PackedScene" uid="uid://dpbaesh6o0115" path="res://game-objects/tool-hammer.tscn" id="2_et6i1"]
+[ext_resource type="PackedScene" uid="uid://cv5tpobbdgyia" path="res://game-objects/tool-drill.tscn" id="3_7q7tw"]
 [ext_resource type="Texture2D" uid="uid://cjo1bgcg27tw1" path="res://art/tool-placeholder.png" id="3_ji6eb"]
+[ext_resource type="Texture2D" uid="uid://dkv1cjcilmpbv" path="res://art/drill-placeholder.png" id="5_1d42b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mecld"]
 animations = [{
@@ -24,6 +26,7 @@ height = 16.0
 collision_layer = 2
 script = ExtResource("1_20ov7")
 hammer_scene = ExtResource("2_et6i1")
+drill_scene = ExtResource("3_7q7tw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
@@ -33,9 +36,16 @@ sprite_frames = SubResource("SpriteFrames_mecld")
 position = Vector2(0, 8)
 
 [node name="HammerSprite" type="Sprite2D" parent="AnimatedSprite2D/Tools"]
+visible = false
 position = Vector2(6, -9)
 scale = Vector2(0.46875, 0.46875)
 texture = ExtResource("3_ji6eb")
+
+[node name="DrillSprite" type="Sprite2D" parent="AnimatedSprite2D/Tools"]
+visible = false
+position = Vector2(9, -10)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_1d42b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)

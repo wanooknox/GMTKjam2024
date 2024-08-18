@@ -4,8 +4,10 @@ extends CharacterBody2D
 @export var SPEED:float = 150.0
 @export var JUMP_VELOCITY:float = -300.0
 @export var hammer_scene: PackedScene
+@export var drill_scene: PackedScene
 
 @onready var _hammer_sprite: Sprite2D = $AnimatedSprite2D/Tools/HammerSprite
+@onready var _drill_sprite: Sprite2D = $AnimatedSprite2D/Tools/DrillSprite
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var _current_tool_type: String = "none"
@@ -66,6 +68,8 @@ func _show_picked_up_tool(type: String):
 	match type.to_lower():
 		"hammer":
 			_hammer_sprite.visible = true
+		"drill":
+			_drill_sprite.visible = true
 		_:
 			print("Error: Unknown tool type " + type)
 			return # TODO Maybe throw an exception instead of this BS
@@ -76,6 +80,10 @@ func _throw_current_tool():
 	match _current_tool_type:
 		"hammer":
 			new_tool_instance = hammer_scene.instantiate()
+			_hammer_sprite.visible = false
+		"drill":
+			new_tool_instance = drill_scene.instantiate()
+			_drill_sprite.visible = false
 
 	if new_tool_instance != null:
 		get_tree().current_scene.add_child(new_tool_instance)
