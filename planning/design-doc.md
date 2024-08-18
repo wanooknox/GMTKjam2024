@@ -23,15 +23,29 @@ You are a lowly construction worker on a job site with a failing saffolding. You
   * [x] Gravity
   * [x] Platform collisions
   * [x] Jumping between platforms
-  * [ ] Problem Points (interactable object with timer that needs to be fixed)
+  * [x] Problem Points (interactable object with timer that needs to be fixed)
   * [x] Scoring system + Score UI
-  * [ ] Audio system: ability to play arbitrary audio
+  * [x] Audio system: ability to play arbitrary audio
 * Extras
-* [ ] Pixel font of UI text
+  * Add tool switching mechanism (stand over tool and interact to pickup, drops current tool)
+    * [ ] model tools as physics objects (so they collide with environment tiles)
+    * [ ] stand over tool and interact to pickup, drops current tool
+    * [ ] display tool held by worker (stick sprites together or just swap sprite?)
   * Multiple different problems that require different tools
-    * [ ] Loose nails (hammer)
+    * [x] Loose nails (hammer)
     * [ ] Loose bolts (drill)
     * [ ] Extended plank (saw)
+  * [ ] Find and bind sfx to various actions (jump, land, hammer, drill, saw)
+  * [ ] flip character sprite when changing directions
+  * [ ] character sprites for running/jumping (bobbing animation for running)
+  * [ ] sprite sheet for environment tile map
+    * [ ] wood planks
+    * [ ] ground dirt
+    * [ ] background brick wall
+    * [ ] window shapes for variety
+    * [ ] blue sky for outside edge of building
+    * [ ] metal struts?
+  * [ ] Pixel font for UI text
   * [ ] Faster tools for faster fixing
   * [ ] Unlockable elevator to reach the ground and swap tools quickly
   * [ ] Saftey Review Card as the score screen
