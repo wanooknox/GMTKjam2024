@@ -11,7 +11,7 @@ var _eta_s: float = eta_easy_s
 
 
 func _ready() -> void:
-	var difficulty: String = "easy" # TODO wire this up to some global config
+	var difficulty: String = DifficultyTracker.get_difficulty()
 	match difficulty:
 		"easy":
 			_eta_s = eta_easy_s

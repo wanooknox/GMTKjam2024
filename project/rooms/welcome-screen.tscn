@@ -26,13 +26,37 @@ label_settings = SubResource("LabelSettings_hkcvg")
 
 [node name="CenterContainer2" type="CenterContainer" parent="."]
 layout_mode = 0
-offset_top = 160.0
+offset_top = 113.0
+offset_right = 480.0
+offset_bottom = 169.0
+
+[node name="Easy" type="Button" parent="CenterContainer2"]
+layout_mode = 2
+action_mode = 0
+text = "Play Easy"
+
+[node name="CenterContainer3" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_top = 142.0
+offset_right = 480.0
+offset_bottom = 226.0
+
+[node name="Medium" type="Button" parent="CenterContainer3"]
+layout_mode = 2
+action_mode = 0
+text = "Play Medium"
+
+[node name="CenterContainer4" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_top = 195.0
 offset_right = 480.0
 offset_bottom = 257.0
 
-[node name="Button" type="Button" parent="CenterContainer2"]
+[node name="Hard" type="Button" parent="CenterContainer4"]
 layout_mode = 2
 action_mode = 0
-text = "Click Here or Press Space to start"
+text = "Play Hard"
 
-[connection signal="pressed" from="CenterContainer2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer2/Easy" to="." method="_on_easy_button_pressed"]
+[connection signal="pressed" from="CenterContainer3/Medium" to="." method="_on_medium_button_pressed"]
+[connection signal="pressed" from="CenterContainer4/Hard" to="." method="_on_hard_button_pressed"]
