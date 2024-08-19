@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://gumiodhnhytr"]
 
 [ext_resource type="Script" path="res://scripts/ui-score-updater.gd" id="1_d3t8f"]
-[ext_resource type="Theme" path="res://art/ui_theme.tres" id="2_qrjdu"]
+[ext_resource type="Theme" uid="uid://bk0moya8hixhu" path="res://art/ui_theme.tres" id="2_qrjdu"]
 
 [node name="GameCanvas" type="CanvasLayer"]
 
