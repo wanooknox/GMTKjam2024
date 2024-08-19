@@ -12,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_qrjdu")
 script = ExtResource("1_d3t8f")
 
 [node name="TextBackground" type="ColorRect" parent="FullScreenOverlay"]
@@ -32,7 +33,15 @@ offset_top = 4.0
 offset_right = -3.0
 offset_bottom = 27.0
 grow_horizontal = 0
-theme = ExtResource("2_qrjdu")
 text = "Saftey Rating: -9999"
 horizontal_alignment = 2
+text_overrun_behavior = 1
+
+[node name="EtaText" type="Label" parent="FullScreenOverlay/TextBackground"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 181.0
+offset_bottom = 26.0
+text = "ETA: 999 seconds"
 text_overrun_behavior = 1
