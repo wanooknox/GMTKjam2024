@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 	_eta_s -= delta
 	eta_label.text = "ETA: " + str(int(_eta_s)) + " seconds"
 	if _eta_s < 0:
-		eta_label.text = "Game Over" # TODO load the game end scene
+		get_tree().change_scene_to_file("res://rooms/report-card.tscn")
 
 
 func _on_score_changed() -> void:
