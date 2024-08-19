@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5h8u1wfjliah"]
+[gd_scene load_steps=4 format=3 uid="uid://b5h8u1wfjliah"]
 
 [ext_resource type="Theme" path="res://art/ui_theme.tres" id="1_0q4bn"]
+[ext_resource type="Script" path="res://scripts/report-card-populator.gd" id="2_c32qt"]
 [ext_resource type="Texture2D" uid="uid://daxanfkkji0x3" path="res://art/review-card.png" id="2_jckcw"]
 
 [node name="ReportCard" type="CanvasLayer"]
+follow_viewport_enabled = true
 
 [node name="FullScreenOverlay" type="Control" parent="."]
 layout_mode = 3
@@ -12,17 +14,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme = ExtResource("1_0q4bn")
+script = ExtResource("2_c32qt")
 
 [node name="Background" type="ColorRect" parent="FullScreenOverlay"]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -3.0
-offset_top = -3.0
-offset_right = 4.0
-offset_bottom = 324.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.694118, 0.243137, 0.32549, 1)
 
 [node name="ReportCard" type="Sprite2D" parent="FullScreenOverlay/Background"]
@@ -35,9 +38,9 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -142.0
+offset_left = -135.0
 offset_top = 89.0
-offset_right = -57.0
+offset_right = -51.0
 offset_bottom = 174.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 80
