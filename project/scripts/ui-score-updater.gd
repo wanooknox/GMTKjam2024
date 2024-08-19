@@ -1,6 +1,6 @@
 extends Node
 
-@onready var score_label: Label = $ScoreText # Shorthand: get 'ScoreText' child from node this script is attached to
+@onready var score_label: Label = $TextBackground/ScoreText # Shorthand: get 'ScoreText' child from node this script is attached to
 
 
 func _ready() -> void:
