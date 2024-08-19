@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://kilpcyfasynw"]
+
+[ext_resource type="Texture2D" uid="uid://b7iwp33o3h651" path="res://art/gamepad-buttons.png" id="1_6urxl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbrbt"]
+atlas = ExtResource("1_6urxl")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7laa"]
+atlas = ExtResource("1_6urxl")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xes5b"]
+atlas = ExtResource("1_6urxl")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skko5"]
+atlas = ExtResource("1_6urxl")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkcyq"]
+atlas = ExtResource("1_6urxl")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uak48"]
+atlas = ExtResource("1_6urxl")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgkq4"]
+atlas = ExtResource("1_6urxl")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pff5c"]
+atlas = ExtResource("1_6urxl")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_227x4"]
+atlas = ExtResource("1_6urxl")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2d6la"]
+atlas = ExtResource("1_6urxl")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8sy20"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbrbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7laa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xes5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skko5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkcyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uak48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgkq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pff5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_227x4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2d6la")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GamepadButtons" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_8sy20")
+speed_scale = 0.0

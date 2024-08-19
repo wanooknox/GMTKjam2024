@@ -1,9 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dubhdt75baxr7"]
 
 [ext_resource type="Script" path="res://scripts/welcome_screen.gd" id="1_eya7r"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_hkcvg"]
-font_size = 37
+[ext_resource type="Theme" uid="uid://bk0moya8hixhu" path="res://art/ui_theme.tres" id="1_u2avc"]
 
 [node name="Welcome-screen" type="Control"]
 layout_mode = 3
@@ -12,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_u2avc")
 script = ExtResource("1_eya7r")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -21,42 +20,64 @@ offset_bottom = 67.0
 
 [node name="Label" type="Label" parent="CenterContainer"]
 layout_mode = 2
-text = "Project"
-label_settings = SubResource("LabelSettings_hkcvg")
+theme_override_font_sizes/font_size = 40
+text = "Scaffolding Scramble"
 
-[node name="CenterContainer2" type="CenterContainer" parent="."]
+[node name="TopRight" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TopRight"]
 layout_mode = 0
-offset_top = 113.0
-offset_right = 480.0
-offset_bottom = 169.0
+offset_left = -120.0
+offset_top = 72.0
+offset_right = 19.0
+offset_bottom = 173.0
 
-[node name="Easy" type="Button" parent="CenterContainer2"]
+[node name="Easy" type="Button" parent="TopRight/VBoxContainer"]
 layout_mode = 2
 action_mode = 0
 text = "Play Easy"
 
-[node name="CenterContainer3" type="CenterContainer" parent="."]
-layout_mode = 0
-offset_top = 142.0
-offset_right = 480.0
-offset_bottom = 226.0
-
-[node name="Medium" type="Button" parent="CenterContainer3"]
+[node name="Medium" type="Button" parent="TopRight/VBoxContainer"]
 layout_mode = 2
 action_mode = 0
 text = "Play Medium"
 
-[node name="CenterContainer4" type="CenterContainer" parent="."]
-layout_mode = 0
-offset_top = 195.0
-offset_right = 480.0
-offset_bottom = 257.0
-
-[node name="Hard" type="Button" parent="CenterContainer4"]
+[node name="Hard" type="Button" parent="TopRight/VBoxContainer"]
 layout_mode = 2
 action_mode = 0
 text = "Play Hard"
 
-[connection signal="pressed" from="CenterContainer2/Easy" to="." method="_on_easy_button_pressed"]
-[connection signal="pressed" from="CenterContainer3/Medium" to="." method="_on_medium_button_pressed"]
-[connection signal="pressed" from="CenterContainer4/Hard" to="." method="_on_hard_button_pressed"]
+[node name="Controls" type="Button" parent="TopRight/VBoxContainer"]
+layout_mode = 2
+text = "controls
+"
+
+[node name="TopLeft" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TopLeft"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 304.0
+offset_bottom = 304.0
+bbcode_enabled = true
+text = "The saftey inspectors are coming! There isn't much time before they arrive!
+
+There are loose nails and bolts everywhere! Hurry! you need to fix all the saftey problems before the inspectors arrive!"
+fit_content = true
+
+[connection signal="pressed" from="TopRight/VBoxContainer/Easy" to="." method="_on_easy_button_pressed"]
+[connection signal="pressed" from="TopRight/VBoxContainer/Medium" to="." method="_on_medium_button_pressed"]
+[connection signal="pressed" from="TopRight/VBoxContainer/Hard" to="." method="_on_hard_button_pressed"]
+[connection signal="pressed" from="TopRight/VBoxContainer/Controls" to="." method="_on_controls_pressed"]

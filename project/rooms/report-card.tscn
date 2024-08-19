@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5h8u1wfjliah"]
+[gd_scene load_steps=4 format=3 uid="uid://bbmek7f7gekbv"]
 
-[ext_resource type="Theme" path="res://art/ui_theme.tres" id="1_0q4bn"]
+[ext_resource type="Theme" uid="uid://bk0moya8hixhu" path="res://art/ui_theme.tres" id="1_0q4bn"]
 [ext_resource type="Script" path="res://scripts/report-card-populator.gd" id="2_c32qt"]
 [ext_resource type="Texture2D" uid="uid://daxanfkkji0x3" path="res://art/review-card.png" id="2_jckcw"]
 

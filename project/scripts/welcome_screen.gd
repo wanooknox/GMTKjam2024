@@ -27,3 +27,7 @@ func _on_medium_button_pressed() -> void:
 func _on_hard_button_pressed() -> void:
 	DifficultyTracker.set_difficulty("hard")
 	get_tree().change_scene_to_file("res://rooms/game.tscn")
+
+
+func _on_controls_pressed() -> void:
+	get_tree().change_scene_to_file("res://rooms/controls_screen.tscn")
