@@ -101,6 +101,7 @@ animations = [{
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ewhi3"]
 
 [node name="InteractableBolt" type="Node2D"]
+z_index = 200
 script = ExtResource("1_wr54k")
 seconds_per_animation_step = 0.05
 

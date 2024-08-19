@@ -17,10 +17,12 @@ z_index = 100
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -7)
+zoom = Vector2(2, 2)
 limit_left = -320
 limit_right = 320
 limit_bottom = 64
-drag_vertical_enabled = true
+limit_smoothed = true
+position_smoothing_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
@@ -61,4 +63,4 @@ position = Vector2(0, -896)
 rotation = -3.14159
 
 [node name="InteractableBolt" parent="." instance=ExtResource("8_fdb48")]
-position = Vector2(-72, -104)
+position = Vector2(-72, -100)

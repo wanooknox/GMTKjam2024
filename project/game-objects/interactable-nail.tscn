@@ -43,6 +43,7 @@ animations = [{
 }]
 
 [node name="InteractableNail" type="Node2D"]
+z_index = 200
 script = ExtResource("1_4mmhd")
 
 [node name="Area2D" type="Area2D" parent="."]
