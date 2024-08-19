@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_0q4bn")
 
-[node name="RedBackground" type="ColorRect" parent="FullScreenOverlay"]
+[node name="Background" type="ColorRect" parent="FullScreenOverlay"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -25,12 +25,12 @@ offset_bottom = 324.0
 grow_horizontal = 2
 color = Color(0.694118, 0.243137, 0.32549, 1)
 
-[node name="ReportCard" type="Sprite2D" parent="FullScreenOverlay/RedBackground"]
+[node name="ReportCard" type="Sprite2D" parent="FullScreenOverlay/Background"]
 position = Vector2(243, 163)
 scale = Vector2(2, 2)
 texture = ExtResource("2_jckcw")
 
-[node name="Grade" type="Label" parent="FullScreenOverlay/RedBackground"]
+[node name="Grade" type="Label" parent="FullScreenOverlay/Background"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -46,7 +46,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 text_overrun_behavior = 1
 
-[node name="Detail" type="Label" parent="FullScreenOverlay/RedBackground"]
+[node name="Detail" type="Label" parent="FullScreenOverlay/Background"]
 layout_mode = 0
 offset_left = 67.0
 offset_top = 95.0
