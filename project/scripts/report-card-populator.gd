@@ -1,12 +1,10 @@
 extends Node
 
-
 @export var grade_a: int = -100
-@export var grade_b: int = -300 
+@export var grade_b: int = -300
 @export var grade_c: int = -900
 @export var grade_d: int = -2700
 @export var grade_e: int = -8100
-
 
 @onready var _grade: Label = $Background/Grade
 @onready var _detail: Label = $Background/Detail
@@ -26,3 +24,7 @@ func _ready() -> void:
 		_grade.text = "e"
 	else:
 		_grade.text = "f"
+
+
+func _go_home() -> void:
+	get_tree().change_scene_to_file("res://rooms/welcome-screen.tscn")
