@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://tqo5msqdb8vj"]
+[gd_scene load_steps=18 format=3 uid="uid://dkofhikd58gpb"]
 
 [ext_resource type="Script" path="res://scripts/interactable-bolt.gd" id="1_wr54k"]
 [ext_resource type="Texture2D" uid="uid://cb3th3h7i34c5" path="res://art/bolt-sheet.png" id="2_sjyw8"]
