@@ -20,3 +20,12 @@ func _pickup_area_entered(body: Node2D) -> void:
 
 func _on_pickup_area_exited(_body: Node2D) -> void:
 	_player = null
+
+
+func _on_body_entered(body:Node) -> void:
+	AudioPlayer.play("fx", "hit")
+
+
+
+func _on_body_exited(body:Node) -> void:
+	AudioPlayer.play("fx", "hit")

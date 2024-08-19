@@ -5,6 +5,7 @@ signal on_play_sound(category: String, sound: AudioStream)
 var _fx_sounds: Dictionary = {
 	"random": load("res://sfx/random.wav"),
 	"jump": load("res://sfx/jump.wav"),
+	"hit": load("res://sfx/hit2.wav"),
 	"hammer": load("res://sfx/hammer.wav"),
 	"drill": load("res://sfx/drill.wav"),
 }

@@ -42,17 +42,20 @@ offset_bottom = 173.0
 [node name="Easy" type="Button" parent="TopRight/VBoxContainer"]
 layout_mode = 2
 action_mode = 0
-text = "Play Easy"
+text = "Easy"
 
 [node name="Medium" type="Button" parent="TopRight/VBoxContainer"]
 layout_mode = 2
 action_mode = 0
-text = "Play Medium"
+text = "Medium"
 
 [node name="Hard" type="Button" parent="TopRight/VBoxContainer"]
 layout_mode = 2
 action_mode = 0
-text = "Play Hard"
+text = "Hard"
+
+[node name="Label" type="Label" parent="TopRight/VBoxContainer"]
+layout_mode = 2
 
 [node name="Controls" type="Button" parent="TopRight/VBoxContainer"]
 layout_mode = 2
