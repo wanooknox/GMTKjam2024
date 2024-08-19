@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://gumiodhnhytr"]
+[gd_scene load_steps=3 format=3 uid="uid://gumiodhnhytr"]
 
 [ext_resource type="Script" path="res://scripts/ui-score-updater.gd" id="1_d3t8f"]
+[ext_resource type="Theme" uid="uid://bk0moya8hixhu" path="res://art/ui_theme.tres" id="2_qrjdu"]
 
 [node name="GameCanvas" type="CanvasLayer"]
 
@@ -23,5 +24,6 @@ offset_top = 4.0
 offset_right = -3.0
 offset_bottom = 27.0
 grow_horizontal = 0
+theme = ExtResource("2_qrjdu")
 text = "0"
 horizontal_alignment = 2
