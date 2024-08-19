@@ -14,6 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_qrjdu")
 script = ExtResource("1_d3t8f")
+eta_easy_s = 20.0
 
 [node name="TextBackground" type="ColorRect" parent="FullScreenOverlay"]
 layout_mode = 1
