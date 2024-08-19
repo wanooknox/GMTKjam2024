@@ -8,6 +8,7 @@ extends Node
 @onready var eta_label: Label = $TextBackground/EtaText
 
 var _eta_s: float = eta_easy_s
+var _curr_score: int
 
 
 func _ready() -> void:
@@ -29,9 +30,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	_eta_s -= delta
 	eta_label.text = "ETA: " + str(int(_eta_s)) + " seconds"
-	if _eta_s < 0:
+	if _eta_s < 0 or _curr_score == 0:
 		get_tree().change_scene_to_file("res://rooms/report-card.tscn")
 
 
 func _on_score_changed() -> void:
-	score_label.text = "Safety Rating: %s" % str(ScoreTracker.get_score())
+	_curr_score = ScoreTracker.get_score()
+	score_label.text = "Safety Rating: %s" % str(_curr_score)
