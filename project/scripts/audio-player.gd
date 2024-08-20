@@ -10,6 +10,10 @@ var _fx_sounds: Dictionary = {
 	"drill": load("res://sfx/drill.wav"),
 }
 
+var _music_sounds: Dictionary = {
+	"music": load("res://sfx/music.wav")
+}
+
 
 func play(category: String, sound_name: String) -> void:
 	var sound: AudioStream = null
@@ -18,8 +22,8 @@ func play(category: String, sound_name: String) -> void:
 			if sound_name in _fx_sounds:
 				sound = _fx_sounds[sound_name]
 		"music":
-			if sound_name in _fx_sounds: # TODO Add music dictionary
-				sound = _fx_sounds[sound_name]
+			if sound_name in _music_sounds: 
+				sound = _music_sounds[sound_name]
 	if sound == null:
 		print("Error: No sound called '" + sound_name + "' in category '" + category + "'")
 		return

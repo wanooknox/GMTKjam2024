@@ -3,6 +3,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ScoreTracker.reset_score()
+	AudioPlayer.play("music", "music")
 
 
 func _process(_delta: float) -> void:

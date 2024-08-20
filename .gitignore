@@ -8,6 +8,8 @@ temp/
 # Obsidian
 .obsidian/
 
+project/out/
+
 # Godot 4+ specific ignores
 .godot/
 
