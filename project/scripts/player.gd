@@ -53,7 +53,7 @@ func _physics_process(delta: float) -> void:
 
 	if velocity.y < 0:
 		animated_sprite.play("jump")
-	elif velocity.y > 0:
+	elif velocity.y > 20:
 		animated_sprite.play("fall")
 
 	move_and_slide()
