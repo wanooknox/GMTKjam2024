@@ -21,9 +21,7 @@ position = Vector2(0, -7)
 limit_left = -320
 limit_right = 320
 limit_bottom = 64
-limit_smoothed = true
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
+drag_vertical_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
 

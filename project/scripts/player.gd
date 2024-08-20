@@ -44,6 +44,16 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	if velocity.x != 0:
+		animated_sprite.play("run")
+	else:
+		animated_sprite.play("idle")
+
+	if velocity.y < 0:
+		animated_sprite.play("jump")
+	elif velocity.y > 0:
+		animated_sprite.play("fall")
+
 	move_and_slide()
 
 
