@@ -62,6 +62,10 @@ layout_mode = 2
 text = "controls
 "
 
+[node name="Button" type="Button" parent="TopRight/VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
 [node name="TopLeft" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 0
@@ -75,7 +79,7 @@ offset_top = 64.0
 offset_right = 304.0
 offset_bottom = 304.0
 bbcode_enabled = true
-text = "The saftey inspectors are coming! There isn't much time before they arrive!
+text = "The safety inspectors are coming! There isn't much time before they arrive!
 
 There are loose nails and bolts everywhere! Hurry! You need to scale the tower and  fix all the saftey problems before the inspectors arrive!"
 fit_content = true
@@ -84,3 +88,4 @@ fit_content = true
 [connection signal="pressed" from="TopRight/VBoxContainer/Medium" to="." method="_on_medium_button_pressed"]
 [connection signal="pressed" from="TopRight/VBoxContainer/Hard" to="." method="_on_hard_button_pressed"]
 [connection signal="pressed" from="TopRight/VBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="TopRight/VBoxContainer/Button" to="." method="_on_credits_pressed"]

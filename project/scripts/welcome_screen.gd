@@ -32,3 +32,7 @@ func _on_hard_button_pressed() -> void:
 
 func _on_controls_pressed() -> void:
 	get_tree().change_scene_to_file("res://rooms/controls_screen.tscn")
+
+
+func _on_credits_pressed() -> void:
+	get_tree().change_scene_to_file("res://rooms/credits_screen.tscn")
