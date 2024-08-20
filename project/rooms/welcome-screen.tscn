@@ -77,7 +77,7 @@ offset_bottom = 304.0
 bbcode_enabled = true
 text = "The saftey inspectors are coming! There isn't much time before they arrive!
 
-There are loose nails and bolts everywhere! Hurry! you need to fix all the saftey problems before the inspectors arrive!"
+There are loose nails and bolts everywhere! Hurry! You need to scale the tower and  fix all the saftey problems before the inspectors arrive!"
 fit_content = true
 
 [connection signal="pressed" from="TopRight/VBoxContainer/Easy" to="." method="_on_easy_button_pressed"]
