@@ -37,10 +37,10 @@ tile_set = ExtResource("2_mjhiw")
 [node name="GameCanvas" parent="." instance=ExtResource("3_o36uh")]
 
 [node name="ToolHammer" parent="." instance=ExtResource("5_8k53q")]
-position = Vector2(-87, 23)
+position = Vector2(20, 36)
 
 [node name="ToolDrill" parent="." instance=ExtResource("6_x0e57")]
-position = Vector2(81, 20)
+position = Vector2(76, -344)
 
 [node name="WorldBoundaries" type="Node2D" parent="."]
 
