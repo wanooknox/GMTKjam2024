@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv5tpobbdgyia"]
+[gd_scene load_steps=6 format=3 uid="uid://cv5tpobbdgyia"]
 
 [ext_resource type="Script" path="res://scripts/tool.gd" id="1_c41rh"]
-[ext_resource type="Texture2D" uid="uid://dkv1cjcilmpbv" path="res://art/drill-placeholder.png" id="2_l714q"]
+[ext_resource type="Texture2D" uid="uid://btst5v1pabrbf" path="res://art/tools.png" id="2_eejib"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0j7uf"]
 bounce = 0.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_527ej"]
+size = Vector2(16, 14)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_822rv"]
 
@@ -19,11 +22,21 @@ script = ExtResource("1_c41rh")
 type = "drill"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(5, -3, -4, -3, -4, 4, 4, -1)
+position = Vector2(-4.76837e-07, 2.98023e-07)
+scale = Vector2(1.5, 1.5625)
+polygon = PackedVector2Array(5, -1, 5, -3, -2, -4, -5, -3, -5, 4, -3, 4, 4, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionPolygon2D"]
-scale = Vector2(0.64, 0.64)
-texture = ExtResource("2_l714q")
+position = Vector2(3.17891e-07, -1.90735e-07)
+scale = Vector2(0.666667, 0.64)
+texture = ExtResource("2_eejib")
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_527ej")
+disabled = true
 
 [node name="PickupArea" type="Area2D" parent="."]
 collision_mask = 2

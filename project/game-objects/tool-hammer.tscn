@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dpbaesh6o0115"]
 
-[ext_resource type="Texture2D" uid="uid://cjo1bgcg27tw1" path="res://art/tool-placeholder.png" id="1_6uqwl"]
 [ext_resource type="Script" path="res://scripts/tool.gd" id="1_6vxfe"]
+[ext_resource type="Texture2D" uid="uid://btst5v1pabrbf" path="res://art/tools.png" id="2_wx05g"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lqfqc"]
 bounce = 0.5
@@ -20,11 +20,15 @@ script = ExtResource("1_6vxfe")
 type = "hammer"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-3.57628e-07, 0)
+scale = Vector2(1.5, 1.375)
 polygon = PackedVector2Array(5, -5, -5, -5, -5, -2, -1, 5, 1, 5, 5, -2)
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionPolygon2D"]
-scale = Vector2(0.64, 0.64)
-texture = ExtResource("1_6uqwl")
+position = Vector2(2.38419e-07, 0)
+scale = Vector2(0.666667, 0.727273)
+texture = ExtResource("2_wx05g")
+hframes = 2
 
 [node name="PickupArea" type="Area2D" parent="."]
 collision_mask = 2

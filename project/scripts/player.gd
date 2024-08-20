@@ -6,8 +6,9 @@ extends CharacterBody2D
 @export var hammer_scene: PackedScene
 @export var drill_scene: PackedScene
 
-@onready var _hammer_sprite: Sprite2D = $AnimatedSprite2D/Tools/HammerSprite
-@onready var _drill_sprite: Sprite2D = $AnimatedSprite2D/Tools/DrillSprite
+# @onready var _hammer_sprite: Sprite2D = $AnimatedSprite2D/Tools/HammerSprite
+# @onready var _drill_sprite: Sprite2D = $AnimatedSprite2D/Tools/DrillSprite
+@onready var _tool_sprite: Sprite2D = $AnimatedSprite2D/Tools/ToolSprite
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var _current_tool_type: String = "none"
@@ -17,7 +18,8 @@ signal pickup_tool(type: String, tool: Node2D)
 
 func _ready() -> void:
 	pickup_tool.connect(_on_pickup_tool)
-	_hammer_sprite.visible = false
+	# _hammer_sprite.visible = false
+	_tool_sprite.visible = false
 
 
 func _physics_process(delta: float) -> void:
@@ -79,11 +81,14 @@ func _on_pickup_tool(type: String, tool: Node2D) -> void:
 
 
 func _show_picked_up_tool(type: String):
+	_tool_sprite.visible = true
 	match type.to_lower():
 		"hammer":
-			_hammer_sprite.visible = true
+			# _hammer_sprite.visible = true
+			_tool_sprite.frame = 1
 		"drill":
-			_drill_sprite.visible = true
+			# _drill_sprite.visible = true
+			_tool_sprite.frame = 0
 		_:
 			print("Error: Unknown tool type " + type)
 			return # TODO Maybe throw an exception instead of this BS
@@ -94,10 +99,10 @@ func _throw_current_tool():
 	match _current_tool_type:
 		"hammer":
 			new_tool_instance = hammer_scene.instantiate()
-			_hammer_sprite.visible = false
+			# _hammer_sprite.visible = false
 		"drill":
 			new_tool_instance = drill_scene.instantiate()
-			_drill_sprite.visible = false
+			# _drill_sprite.visible = false
 
 	if new_tool_instance != null:
 		get_tree().current_scene.add_child(new_tool_instance)
@@ -105,3 +110,7 @@ func _throw_current_tool():
 		var random_offset = randf_range(-400.0, 400.0)
 		new_tool_instance.rotation = randf_range(-15, 15)
 		new_tool_instance.linear_velocity = Vector2(random_offset, -600)
+
+
+func _landed(_body:Node) -> void:
+	AudioPlayer.play("fx", "hit")
