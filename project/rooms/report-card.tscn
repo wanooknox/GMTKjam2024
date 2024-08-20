@@ -72,21 +72,22 @@ text_overrun_behavior = 1
 [node name="Deduction" type="Label" parent="FullScreenOverlay/Background"]
 layout_mode = 0
 offset_left = 67.0
-offset_top = 95.0
+offset_top = 160.0
 offset_right = 185.0
-offset_bottom = 113.0
-text = "Deduction"
+offset_bottom = 178.0
+text = "Deduction:"
 
 [node name="DeductionValue" type="Label" parent="FullScreenOverlay/Background"]
 layout_mode = 0
-offset_left = 226.0
-offset_top = 95.0
-offset_right = 292.0
-offset_bottom = 113.0
+offset_left = 225.0
+offset_top = 160.0
+offset_right = 291.0
+offset_bottom = 178.0
 text = "-0000"
 horizontal_alignment = 2
 
 [node name="Detail" type="Label" parent="FullScreenOverlay/Background"]
+visible = false
 layout_mode = 0
 offset_left = 67.0
 offset_top = 127.0
@@ -99,6 +100,23 @@ Line 3
 Line 4
 Line 5"
 text_overrun_behavior = 1
+
+[node name="Deduction2" type="Label" parent="FullScreenOverlay/Background"]
+visible = false
+offset_left = 67.0
+offset_top = 95.0
+offset_right = 185.0
+offset_bottom = 113.0
+text = "Deduction"
+
+[node name="DeductionValue2" type="Label" parent="FullScreenOverlay/Background"]
+visible = false
+offset_left = 226.0
+offset_top = 95.0
+offset_right = 292.0
+offset_bottom = 113.0
+text = "-0000"
+horizontal_alignment = 2
 
 [node name="Button" type="Button" parent="FullScreenOverlay"]
 layout_mode = 1
