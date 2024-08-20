@@ -28,12 +28,12 @@ You are a lowly construction worker on a job site with a failing saffolding. You
   * [x] Audio system: ability to play arbitrary audio
 * Extras
   * Game timer mechanism 
-    * [ ] Add a game countdown manager to track time left
-    * [ ] Display seconds remaining in top left of screen
-    * [ ] When timer ends, game is over, display Safety Review Card or game over UI
-    * [ ] Support easy, medium, and hard time limits
-    * [ ] UI on welcome screen to select difficulty
-  * [ ] Figure out how to replace the font and find a Pixel font for UI text
+    * [x] Add a game countdown manager to track time left
+    * [x] Display seconds remaining in top left of screen
+    * [x] When timer ends, game is over, display Safety Review Card or game over UI
+    * [x] Support easy, medium, and hard time limits
+    * [x] UI on welcome screen to select difficulty
+  * [x] Figure out how to replace the font and find a Pixel font for UI text
   * Add tool switching mechanism (stand over tool and interact to pickup, drops current tool)
     * [x] model tools as physics objects (so they collide with environment tiles)
     * [x] stand over tool and interact to pickup, drops current tool
@@ -52,16 +52,16 @@ You are a lowly construction worker on a job site with a failing saffolding. You
     * [ ] invalid tool interaction
     * [ ] land on ground
   * [x] flip character sprite when changing directions
-  * [ ] character sprites for running/jumping (bobbing animation for running)
-  * [ ] sprite sheet for environment tile map
-    * [ ] wood planks
-    * [ ] ground dirt
-    * [ ] background brick wall
-    * [ ] window shapes for variety
-    * [ ] blue sky for outside edge of building
-    * [ ] metal struts?
+  * [x] character sprites for running/jumping (bobbing animation for running)
+  * [x] sprite sheet for environment tile map
+    * [x] wood planks
+    * [x] ground dirt
+    * [x] background brick wall
+    * [x] window shapes for variety
+    * [x] blue sky for outside edge of building
+    * [x] metal struts?
   * [ ] ~~Faster tools for faster fixing?~~
-  * [ ] Saftey Review Card as the score screen
-  * [ ] Different interaction methods for different tools (Hold button for drill, tap for hammer, arrow keys for saw)
-  * [ ] Unlockable elevator to reach the ground and swap tools quickly
+  * [x] Saftey Review Card as the score screen
+  * [x] Different interaction methods for different tools (Hold button for drill, tap for hammer, arrow keys for saw)
+  * [ ] ~~Unlockable elevator to reach the ground and swap tools quickly~~
   * [ ] (Stretch) Unlevel floor panels, you need to shorten the vertical beam below
