@@ -18,6 +18,7 @@ contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_6vxfe")
 type = "hammer"
+hit_sfx_delay_cutoff = 0.2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-3.57628e-07, 0)
@@ -36,6 +37,6 @@ collision_mask = 2
 [node name="PickupCollider" type="CollisionShape2D" parent="PickupArea"]
 shape = SubResource("CircleShape2D_822rv")
 
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="PickupArea" to="." method="_pickup_area_entered"]
 [connection signal="body_exited" from="PickupArea" to="." method="_on_pickup_area_exited"]

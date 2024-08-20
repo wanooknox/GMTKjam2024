@@ -20,6 +20,7 @@ contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_c41rh")
 type = "drill"
+hit_sfx_delay_cutoff = 0.2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-4.76837e-07, 2.98023e-07)
