@@ -79,9 +79,9 @@ offset_top = 64.0
 offset_right = 304.0
 offset_bottom = 304.0
 bbcode_enabled = true
-text = "The safety inspectors are coming! There isn't much time before they arrive!
+text = "The safety inspectors are coming! There isn't much time before they arrive! Grab your hammer, it's time to climb!
 
-There are loose nails and bolts everywhere! Hurry! You need to scale the tower and  fix all the saftey problems before the inspectors arrive!"
+There are loose nails and bolts everywhere! Hurry! You need to scale the tower and  fix all the safety problems before the inspectors arrive!"
 fit_content = true
 
 [connection signal="pressed" from="TopRight/VBoxContainer/Easy" to="." method="_on_easy_button_pressed"]
